@@ -1,0 +1,7 @@
+{
+    "[astro]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never"
+        }
+    }
+}

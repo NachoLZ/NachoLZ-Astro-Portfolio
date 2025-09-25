@@ -1,0 +1,87 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import { TAGS } from "./TechTags.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Marzo 2023 – Agosto 2025",
+    title: "CTO",
+    company: "BLOCK Capital",
+    description:
+      "Dirigí el desarrollo de una plataforma de inversión cripto desde cero hasta producción. Diseñé arquitecturas full-stack, optimicé despliegues en la nube (GCP) y creé interfaces responsivas en React y Tailwind. Logramos entrar en Lanzadera y atraer 100+ early adopters.",
+    image: "/experience/bc.webp",
+    tags: [
+      TAGS.REMIX,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.GCP,
+      TAGS.TYPESCRIPT,
+      TAGS.POSTGRESQL,
+      TAGS.MOBILE,
+      TAGS.PHOTOSHOP,
+    ],
+    link: "https://block-capital.cl",
+  },
+  {
+    date: "Febrero 2024 – Marzo 2025",
+    title: "Lead Software Engineer",
+    company: "Sireg Chile",
+    description:
+      "Desarrollé una app móvil y panel de control en tiempo real adoptados por 150+ inspectores municipales. Lideré la arquitectura y desarrollo, logrando reducir en un 33% los tiempos de respuesta ante emergencias.",
+    image: "/experience/sireg.webp",
+    tags: [
+      TAGS.REMIX,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.GCP,
+      TAGS.TYPESCRIPT,
+      TAGS.POSTGRESQL,
+      TAGS.MOBILE,
+    ],
+  },
+  {
+    date: "Diciembre 2021 – Julio 2022",
+    title: "Full-Stack Developer & Consultant",
+    company: "Envision Chile (Microsoft Partner)",
+    description:
+      "Construí aplicaciones empresariales en .NET Core y React que escalaron a 100+ usuarios diarios. Migré sistemas legacy a arquitectura basada en componentes, reduciendo el tiempo de mantenimiento de semanas a días.",
+
+    tags: [
+      TAGS.DOTNET,
+      TAGS.CSHARP,
+      TAGS.SQLSERVER,
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+    ],
+    link: "https://envision.cl",
+  },
+  {
+    date: "Marzo 2021 – Septiembre 2022",
+    title: "Front-End Lead",
+    company: "Price2Be",
+    description:
+      "Lideré el frontend en React y Tailwind de un sistema de recomendación de precios basado en ML. Creé dashboards de tendencias de mercado y ventas. El proyecto fue premiado como Mejor Proyecto de IA y Ciencia de Datos en la USM Software Fair.",
+    image: "/experience/price2be.webp",
+    tags: [
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.PYTHON,
+      TAGS.MONGODB,
+      TAGS.ML,
+      TAGS.PHOTOSHOP,
+    ],
+    link: "https://price2be.feriadesoftware.cl/",
+    github: "https://github.com/NachoLZ/frontend2.0",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

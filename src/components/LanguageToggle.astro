@@ -1,0 +1,129 @@
+---
+import SpainIcon from "./icons/Spain.astro";
+import UnitedKingdomIcon from "./icons/UnitedKingdom.astro";
+
+const LANGUAGES = [
+  { code: "en", name: "English", icon: UnitedKingdomIcon },
+  { code: "es", name: "Español", icon: SpainIcon },
+];
+---
+
+<div class="relative">
+  <button
+    transition:persist
+    id="language-toggle-btn"
+    class="appearance-none border-none flex items-center gap-2 hover:scale-125 transition"
+  >
+    <span id="current-language-text" class="sr-only">Choose language</span>
+    <div class="relative size-5">
+      {
+        LANGUAGES.map((lang) => {
+          const Icon = lang.icon;
+          return (
+            <Icon
+              id={lang.code}
+              class="language-toggle-icon absolute size-5 transition-all"
+            />
+          );
+        })
+      }
+    </div>
+  </button>
+  <div
+    transition:persist
+    id="languages-menu"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+  >
+    <ul>
+      {
+        LANGUAGES.map((language) => (
+          <li class="languages-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
+            {language.name}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  #languages-menu.open {
+    display: inline;
+    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  const languagesMenu = document.getElementById("languages-menu");
+  const currentLanguageText = document.getElementById("current-language-text");
+
+  const getLanguagePreference = () => {
+    if (typeof localStorage !== "undefined") {
+      return localStorage.getItem("language") ?? "es";
+    }
+    return "es";
+  };
+
+  const updateLanguageDisplay = (languagePreference) => {
+    document.querySelectorAll(".language-toggle-icon").forEach((element) => {
+      element.style.scale = element.id === languagePreference ? "1" : "0";
+    });
+
+    const languageName = languagePreference === "es" ? "Español" : "English";
+    currentLanguageText.innerText = languageName;
+  };
+
+  const updateLanguage = () => {
+    const languagePreference = getLanguagePreference();
+    updateLanguageDisplay(languagePreference);
+  };
+
+  updateLanguage();
+
+  document.addEventListener("click", () =>
+    languagesMenu.classList.remove("open")
+  );
+
+  document
+    .getElementById("language-toggle-btn")
+    .addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isClosed = !languagesMenu.classList.contains("open");
+      languagesMenu.classList[isClosed ? "add" : "remove"]("open");
+    });
+
+  document.querySelectorAll(".languages-menu-option").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      const newLang =
+        e.target.innerText.toLowerCase().trim() === "español" ? "es" : "en";
+      localStorage.setItem("language", newLang);
+
+      const currentUrl = new URL(window.location);
+      const langParam = currentUrl.searchParams.get("lang");
+
+      if (langParam) {
+        currentUrl.searchParams.set("lang", newLang);
+      } else {
+        currentUrl.searchParams.append("lang", newLang);
+      }
+
+      window.location.href = currentUrl.toString();
+    });
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    updateLanguage();
+  });
+</script>

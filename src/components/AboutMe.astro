@@ -1,0 +1,43 @@
+---
+const personalImageAlt = "Ignacio Lizana";
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+      Soy Ignacio, chileno 🇨🇱 e Ingeniero Civil Informático de la Universidad
+      Técnica Federico Santa María. Todo lo que he aprendido en tecnología lo he
+      hecho de forma autodidacta, siempre encontrando la manera de resolver
+      problemas y crear soluciones.
+    </p>
+
+    <p>
+      Fui <strong>CTO de Block Capital</strong>, una startup fintech que ayudé a
+      construir desde cero hasta convertirla en un producto full-stack. Esa
+      experiencia me llevó a Valencia, España 🇪🇸 tras ser seleccionados por <strong
+        >Lanzadera</strong
+      >, una de las aceleradoras más importantes del país.
+    </p>
+
+    <p>
+      Mi camino no ha sido lineal: pasé de aprender por mi cuenta en Chile a
+      liderar proyectos y personas en Europa. Esa mezcla de <strong
+        >autodidacta y emprendedor</strong
+      > define mi forma de trabajar: siempre buscando soluciones, con la convicción
+      de que cada reto es una oportunidad de crecimiento.
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/abbey.webp"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>
