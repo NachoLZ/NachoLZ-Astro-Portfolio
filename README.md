@@ -308,7 +308,7 @@ Under the following terms:
 - 🌐 Portfolio: [https://nacholz.com/](https://nacholz.com/)
 - 💼 LinkedIn: [Your LinkedIn](https://linkedin.com/in/ignacio-lizana)
 - 🐙 GitHub: [@NachoLZ](https://github.com/NachoLZ)
-- 📧 Email: your.email@example.com
+- 📧 Email: ignaciolizana96@gmail.com
 
 ---
 
