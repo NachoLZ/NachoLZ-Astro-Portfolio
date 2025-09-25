@@ -69,11 +69,10 @@ const LANGUAGES = [
   const languagesMenu = document.getElementById("languages-menu");
   const currentLanguageText = document.getElementById("current-language-text");
 
-  const getLanguagePreference = () => {
-    if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("language") ?? "es";
-    }
-    return "es";
+  const getCurrentLanguageFromPath = () => {
+    const path = window.location.pathname;
+    if (path.startsWith("/en")) return "en";
+    return "es"; // Default to Spanish
   };
 
   const updateLanguageDisplay = (languagePreference) => {
@@ -86,16 +85,19 @@ const LANGUAGES = [
   };
 
   const updateLanguage = () => {
-    const languagePreference = getLanguagePreference();
+    const languagePreference = getCurrentLanguageFromPath();
     updateLanguageDisplay(languagePreference);
   };
 
+  // Initialize on page load
   updateLanguage();
 
+  // Close menu when clicking outside
   document.addEventListener("click", () =>
     languagesMenu.classList.remove("open")
   );
 
+  // Toggle menu
   document
     .getElementById("language-toggle-btn")
     .addEventListener("click", (e) => {
@@ -104,26 +106,28 @@ const LANGUAGES = [
       languagesMenu.classList[isClosed ? "add" : "remove"]("open");
     });
 
+  // Handle language selection
   document.querySelectorAll(".languages-menu-option").forEach((element) => {
     element.addEventListener("click", (e) => {
-      const newLang =
-        e.target.innerText.toLowerCase().trim() === "español" ? "es" : "en";
-      localStorage.setItem("language", newLang);
+      const clickedText = e.target.innerText.toLowerCase().trim();
+      const newLang = clickedText === "español" ? "es" : "en";
 
-      const currentUrl = new URL(window.location);
-      const langParam = currentUrl.searchParams.get("lang");
-
-      if (langParam) {
-        currentUrl.searchParams.set("lang", newLang);
+      // Navigate to the appropriate language route
+      if (newLang === "en") {
+        window.location.href = "/en/";
       } else {
-        currentUrl.searchParams.append("lang", newLang);
+        window.location.href = "/";
       }
-
-      window.location.href = currentUrl.toString();
     });
   });
 
+  // Handle Astro page transitions
   document.addEventListener("astro:after-swap", () => {
+    updateLanguage();
+  });
+
+  // Handle browser back/forward
+  window.addEventListener("popstate", () => {
     updateLanguage();
   });
 </script>

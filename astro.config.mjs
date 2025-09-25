@@ -7,4 +7,11 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: "https://nacholz.com/",
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });
