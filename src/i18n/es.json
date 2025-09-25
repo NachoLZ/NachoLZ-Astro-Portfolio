@@ -4,5 +4,33 @@
         "projects": "Proyectos",
         "about": "Sobre mí",
         "contact": "Contacto"
+    },
+    "hero": {
+        "greeting": "Hola, soy Ignacio",
+        "title": "Ingeniero Civil Informático",
+        "description1": "+5 años desarrollando software",
+        "description2": "Ingeniero Civil Informático y Full-Stack Developer",
+        "description3": "actualmente en Valencia, España",
+        "description4": "Especializado en crear aplicaciones web modernas y responsive, con dominio de React, Tailwind y TypeScript.",
+        "available": "Disponible para trabajar",
+        "contact": "Contáctame",
+        "cv": "Descargar CV"
+    },
+    "experience": {
+        "title": "Experiencia laboral",
+        "preview": "Vista previa",
+        "code": "Código"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "preview": "Vista previa",
+        "code": "Código"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "description": "Mi historia y experiencia como desarrollador"
+    },
+    "footer": {
+        "rights": "Casi todos los derechos reservados"
     }
 }

@@ -10,12 +10,24 @@ import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+// Page titles and descriptions based on language
+const pageTitle =
+  currentLocale === "en"
+    ? "Ignacio Lizana Portfolio - Full-Stack Developer with 5+ years of experience"
+    : "Portfolio de Ignacio Lizana - Desarrollador Full-Stack con 5+ años de experiencia";
+
+const pageDescription =
+  currentLocale === "en"
+    ? "Hire Ignacio Lizana to create your web or mobile application. Computer Engineer and Web Developer. Specialized in creating unique and scalable applications."
+    : "Contrata a Ignacio Lizana para crear tu aplicación web o móvil. Ingeniero Civil Informático y Desarrollador Web. Especializado en crear aplicaciones únicas y escalables.";
 ---
 
-<Layout
-  title="Portfolio de nacholz - Desarrollador y Programador Web con 5 años de experiencia"
-  description="Contrata a Ignacio Lizana para crear tu aplicación web o móvil. Ingeniero Civil Informático y Desarrollador Web. Especializado en crear aplicaciones únicas y escalables."
->
+<Layout title={pageTitle} description={pageDescription}>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />
@@ -25,7 +37,7 @@ import TitleSection from "@/components/TitleSection.astro";
     <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
-        Experiencia laboral
+        {i18n.experience.title}
       </TitleSection>
       <Experience />
     </SectionContainer>
@@ -33,7 +45,7 @@ import TitleSection from "@/components/TitleSection.astro";
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Proyectos
+        {i18n.projects.title}
       </TitleSection>
       <Projects />
     </SectionContainer>
@@ -41,7 +53,7 @@ import TitleSection from "@/components/TitleSection.astro";
     <SectionContainer id="sobre-mi">
       <TitleSection>
         <ProfileCheck class="size-8" />
-        Sobre mí
+        {i18n.about.title}
       </TitleSection>
       <AboutMe />
     </SectionContainer>

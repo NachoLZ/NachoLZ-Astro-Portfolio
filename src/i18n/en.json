@@ -4,5 +4,31 @@
         "projects": "Projects",
         "about": "About me",
         "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I'm Ignacio",
+        "title": "Computer Engineer",
+        "subtitle": "Full-Stack Developer with 5+ years of experience",
+        "description": "From Valparaíso, Chile. Specialized in creating unique and scalable web and mobile applications.",
+        "available": "Available for work",
+        "contact": "Contact me",
+        "cv": "Download CV"
+    },
+    "experience": {
+        "title": "Work Experience",
+        "preview": "Preview",
+        "code": "Code"
+    },
+    "projects": {
+        "title": "Projects",
+        "preview": "Preview",
+        "code": "Code"
+    },
+    "about": {
+        "title": "About me",
+        "description": "My story and experience as a developer"
+    },
+    "footer": {
+        "rights": "Almost all rights reserved"
     }
 }

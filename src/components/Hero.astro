@@ -5,6 +5,10 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
+import { getI18N } from "../i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="max-w-xl">
@@ -20,30 +24,27 @@ import GitHubIcon from "@/components/icons/GitHub.astro";
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
+      <Badge>{i18n.hero.available}</Badge>
     </a>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hola, soy Ignacio
+    {i18n.hero.greeting}
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +5 años desarrollando software. <strong
-      >Ingeniero Civil Informático y Full-Stack Developer</strong
-    >
-    <span class="text-red-800 dark:text-red-200"
-      >actualmente en Valencia, España</span
-    >. Especializado en crear aplicaciones web modernas y responsive, con
-    dominio de React, Tailwind y TypeScript.
+    {i18n.hero.description1}. <strong>{i18n.hero.description2}</strong>
+    <span class="text-red-800 dark:text-red-200">
+      {i18n.hero.description3}.
+    </span>{i18n.hero.description4}
   </p>
 
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:ignaciolizana96@gmail.com">
       <MailIcon class="size-4" />
-      Contáctame
+      {i18n.hero.contact}
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/ignacio-lizana">
       <LinkedInIcon class="size-4" />
