@@ -1,14 +1,16 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
 import { TAGS } from "./TechTags.astro";
+import { getI18N } from "../i18n";
 
-const EXPERIENCE = [
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+// Static data that doesn't need translation
+const EXPERIENCE_STATIC = [
   {
-    date: "Marzo 2023 – Agosto 2025",
     title: "CTO",
     company: "BLOCK Capital",
-    description:
-      "Dirigí el desarrollo de una plataforma de inversión cripto desde cero hasta producción. Diseñé arquitecturas full-stack, optimicé despliegues en la nube (GCP) y creé interfaces responsivas en React y Tailwind. Logramos entrar en Lanzadera y atraer 100+ early adopters.",
     image: "/experience/bc.webp",
     tags: [
       TAGS.REMIX,
@@ -23,11 +25,8 @@ const EXPERIENCE = [
     link: "https://block-capital.cl",
   },
   {
-    date: "Febrero 2024 – Marzo 2025",
     title: "Lead Software Engineer",
     company: "Sireg Chile",
-    description:
-      "Desarrollé una app móvil y panel de control en tiempo real adoptados por 150+ inspectores municipales. Lideré la arquitectura y desarrollo, logrando reducir en un 33% los tiempos de respuesta ante emergencias.",
     image: "/experience/sireg.webp",
     tags: [
       TAGS.REMIX,
@@ -40,12 +39,8 @@ const EXPERIENCE = [
     ],
   },
   {
-    date: "Diciembre 2021 – Julio 2022",
     title: "Full-Stack Developer & Consultant",
     company: "Envision Chile (Microsoft Partner)",
-    description:
-      "Construí aplicaciones empresariales en .NET Core y React que escalaron a 100+ usuarios diarios. Migré sistemas legacy a arquitectura basada en componentes, reduciendo el tiempo de mantenimiento de semanas a días.",
-
     tags: [
       TAGS.DOTNET,
       TAGS.CSHARP,
@@ -56,11 +51,8 @@ const EXPERIENCE = [
     link: "https://envision.cl",
   },
   {
-    date: "Marzo 2021 – Septiembre 2022",
     title: "Front-End Lead",
     company: "Price2Be",
-    description:
-      "Lideré el frontend en React y Tailwind de un sistema de recomendación de precios basado en ML. Creé dashboards de tendencias de mercado y ventas. El proyecto fue premiado como Mejor Proyecto de IA y Ciencia de Datos en la USM Software Fair.",
     image: "/experience/price2be.webp",
     tags: [
       TAGS.REACT,
@@ -74,6 +66,13 @@ const EXPERIENCE = [
     github: "https://github.com/NachoLZ/frontend2.0",
   },
 ];
+
+// Combine static data with translations
+const EXPERIENCE = EXPERIENCE_STATIC.map((exp, index) => ({
+  ...exp,
+  date: i18n.experience.entries[index].date,
+  description: i18n.experience.entries[index].description,
+}));
 ---
 
 <ol class="relative mt-16">

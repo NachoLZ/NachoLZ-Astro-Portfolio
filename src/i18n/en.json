@@ -7,9 +7,11 @@
     },
     "hero": {
         "greeting": "Hi, I'm Ignacio",
-        "title": "Computer Engineer",
-        "subtitle": "Full-Stack Developer with 5+ years of experience",
-        "description": "From Valparaíso, Chile. Specialized in creating unique and scalable web and mobile applications.",
+        "title": "Computer Science Engineer",
+        "description1": "+5 years developing software",
+        "description2": "Computer Science Engineer and Full-Stack Developer",
+        "description3": "currently in Valencia, Spain",
+        "description4": "Specialized in creating modern and responsive web applications, with expertise in React, Tailwind, and TypeScript.",
         "available": "Available for work",
         "contact": "Contact me",
         "cv": "Download CV"
@@ -17,16 +19,46 @@
     "experience": {
         "title": "Work Experience",
         "preview": "Preview",
-        "code": "Code"
+        "code": "Code",
+        "entries": [
+            {
+                "date": "March 2023 – August 2025",
+                "description": "Led the development of a crypto investment platform from scratch to production. Designed full-stack architectures, optimized cloud deployments (GCP), and created responsive interfaces in React and Tailwind. We got into Lanzadera and attracted 100+ early adopters."
+            },
+            {
+                "date": "February 2024 – March 2025",
+                "description": "Developed a mobile app and real-time dashboard adopted by 150+ municipal inspectors. I led the architecture and development, achieving a 33% reduction in emergency response times."
+            },
+            {
+                "date": "December 2021 – July 2022",
+                "description": "Built enterprise applications in .NET Core and React that scaled to 100+ daily users. Migrated legacy systems to a component-based architecture, reducing maintenance time from weeks to days."
+            },
+            {
+                "date": "March 2021 – September 2022",
+                "description": "Led the frontend in React and Tailwind for an ML-based price recommendation system. Created dashboards for market trends and sales. The project was awarded Best AI and Data Science Project at the USM Software Fair."
+            }
+        ]
     },
     "projects": {
         "title": "Projects",
         "preview": "Preview",
-        "code": "Code"
+        "code": "Code",
+        "entries": [
+            {
+                "date": "(2020)",
+                "title": "Handy God - 2D game in Unity",
+                "description": "A 2D platformer with physics developed in Unity where the player controls both a stickman (with WASD + Space to move and jump) and a floating hand (with the mouse). The hand can move or dismantle objects to clear obstacles or create paths, while the stickman advances through the level."
+            }
+        ]
     },
     "about": {
         "title": "About me",
-        "description": "My story and experience as a developer"
+        "description": "My story and experience as a developer",
+        "content": {
+            "paragraph1": "I'm Ignacio, Chilean 🇨🇱 and a <strong>Computer Science Engineer</strong> from the <strong>Federico Santa María Technical University</strong>. Everything I've learned in tech has been self-taught, always finding a way to solve problems and create solutions.",
+            "paragraph2": "I was the <strong>CTO of Block Capital</strong>, a fintech startup that I helped build from scratch into a full-stack product. That experience brought me to Valencia, Spain 🇪🇸 after being selected by <strong>Lanzadera</strong>, one of the most important accelerators in the country.",
+            "paragraph3": "My path hasn't been linear: I went from learning on my own in Chile to leading projects and people in Europe. That mix of being <strong>self-taught and an entrepreneur</strong> defines my way of working: always looking for solutions, with the conviction that every challenge is an opportunity for growth."
+        }
     },
     "footer": {
         "rights": "Almost all rights reserved"

@@ -19,16 +19,46 @@
     "experience": {
         "title": "Experiencia laboral",
         "preview": "Vista previa",
-        "code": "Código"
+        "code": "Código",
+        "entries": [
+            {
+                "date": "Marzo 2023 – Agosto 2025",
+                "description": "Dirigí el desarrollo de una plataforma de inversión cripto desde cero hasta producción. Diseñé arquitecturas full-stack, optimicé despliegues en la nube (GCP) y creé interfaces responsivas en React y Tailwind. Logramos entrar en Lanzadera y atraer 100+ early adopters."
+            },
+            {
+                "date": "Febrero 2024 – Marzo 2025",
+                "description": "Desarrollé una app móvil y panel de control en tiempo real adoptados por 150+ inspectores municipales. Lideré la arquitectura y desarrollo, logrando reducir en un 33% los tiempos de respuesta ante emergencias."
+            },
+            {
+                "date": "Diciembre 2021 – Julio 2022",
+                "description": "Construí aplicaciones empresariales en .NET Core y React que escalaron a 100+ usuarios diarios. Migré sistemas legacy a arquitectura basada en componentes, reduciendo el tiempo de mantenimiento de semanas a días."
+            },
+            {
+                "date": "Marzo 2021 – Septiembre 2022",
+                "description": "Lideré el frontend en React y Tailwind de un sistema de recomendación de precios basado en ML. Creé dashboards de tendencias de mercado y ventas. El proyecto fue premiado como Mejor Proyecto de IA y Ciencia de Datos en la USM Software Fair."
+            }
+        ]
     },
     "projects": {
         "title": "Proyectos",
         "preview": "Vista previa",
-        "code": "Código"
+        "code": "Código",
+        "entries": [
+            {
+                "date": "(2020)",
+                "title": "Handy God - Juego 2D en Unity",
+                "description": "Un plataformero 2D con físicas desarrollado en Unity donde el jugador controla tanto a un stickman (con WASD + Espacio para moverse y saltar) como a una mano flotante (con el ratón). La mano puede mover o desarmar objetos para mover obstáculos o crear caminos, mientras el stickman avanza por el nivel."
+            }
+        ]
     },
     "about": {
         "title": "Sobre mí",
-        "description": "Mi historia y experiencia como desarrollador"
+        "description": "Mi historia y experiencia como desarrollador",
+        "content": {
+            "paragraph1": "Soy Ignacio, chileno 🇨🇱 e <strong>Ingeniero Civil Informático</strong> de la <strong>Universidad Técnica Federico Santa María</strong>. Todo lo que he aprendido en tecnología lo he hecho de forma autodidacta, siempre encontrando la manera de resolver problemas y crear soluciones.",
+            "paragraph2": "Fui <strong>CTO de Block Capital</strong>, una startup fintech que ayudé a construir desde cero hasta convertirla en un producto full-stack. Esa experiencia me llevó a Valencia, España 🇪🇸 tras ser seleccionados por <strong>Lanzadera</strong>, una de las aceleradoras más importantes del país.",
+            "paragraph3": "Mi camino no ha sido lineal: pasé de aprender por mi cuenta en Chile a liderar proyectos y personas en Europa. Esa mezcla de <strong>autodidacta y emprendedor</strong> define mi forma de trabajar: siempre buscando soluciones, con la convicción de que cada reto es una oportunidad de crecimiento."
+        }
     },
     "footer": {
         "rights": "Casi todos los derechos reservados"
