@@ -66,7 +66,7 @@ const THEMES = ["Light", "Dark", "System"];
 
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") ?? "system";
+      return localStorage.getItem("theme") ?? "dark";
     }
 
     return window.matchMedia("(prefers-color-scheme: dark)").matches
