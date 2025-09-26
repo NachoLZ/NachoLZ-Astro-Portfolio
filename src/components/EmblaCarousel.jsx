@@ -67,7 +67,7 @@ export const EmblaCarousel = ({ galleries }) => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="max-h-screen max-w-screen"
+                className="max-h-[80vh] max-w-[80vw]"
               />
             </div>
           ))}

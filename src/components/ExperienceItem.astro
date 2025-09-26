@@ -2,6 +2,7 @@
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
+import { getI18N } from "../i18n";
 
 interface Props {
   experience: {
@@ -21,6 +22,8 @@ interface Props {
   };
 }
 
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 const { experience } = Astro.props;
 const { title, company, description, link, date, image, tags, github, images } =
   experience;
@@ -60,7 +63,7 @@ const hasCarouselImages = images.length > 0;
                 class="block"
                 onclick={`event.preventDefault(); document.dispatchEvent(new CustomEvent('open-carousel', { detail: { galleryId: '${company}' } }))`}
               >
-                <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
+                <div class="relative flex flex-col transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
                   <img
                     alt={`${title} at ${company}`}
                     class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 hover:scale-105"
@@ -69,7 +72,7 @@ const hasCarouselImages = images.length > 0;
                   />
                   <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-xl flex items-center justify-center">
                     <div class="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white px-3 py-1 rounded-full text-sm">
-                      Ver galería ({images.length} fotos)
+                      {i18n.misc.gallery} ({images.length} {i18n.misc.photo})
                     </div>
                   </div>
                 </div>

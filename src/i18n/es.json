@@ -62,5 +62,9 @@
     },
     "footer": {
         "rights": "Casi todos los derechos reservados"
+    },
+    "misc": {
+        "gallery": "Ver galería",
+        "photo": "fotos"
     }
 }

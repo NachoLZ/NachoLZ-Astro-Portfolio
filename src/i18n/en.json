@@ -62,5 +62,9 @@
     },
     "footer": {
         "rights": "Almost all rights reserved"
+    },
+    "misc": {
+        "gallery": "See gallery",
+        "photo": "photos"
     }
 }
