@@ -1,9 +1,8 @@
 ---
-import GitHub from "./icons/GitHub.astro";
-import Link from "./icons/Link.astro";
-import LinkButton from "./LinkButton.astro";
 import { TAGS } from "./TechTags.astro";
 import { getI18N } from "../i18n";
+import { getProjectImages } from "../utils/imageUtils";
+import ProjectItem from "./ProjectItem.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -11,79 +10,38 @@ const i18n = getI18N({ currentLocale });
 // Static data that doesn't need translation
 const PROJECTS_STATIC = [
   {
+    name: "Handy God",
     link: "https://nacholz.itch.io/handy-god",
     github: "https://github.com/NachoLZ/HandyGod/",
-    image: "/projects/handygod-stand.webp",
+    image: "/projects/handygod-stand.png",
     tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.PHOTOSHOP],
   },
 ];
 
 // Combine static data with translations
-const PROJECTS = PROJECTS_STATIC.map((project, index) => ({
-  ...project,
-  date: i18n.projects.entries[index].date,
-  title: i18n.projects.entries[index].title,
-  description: i18n.projects.entries[index].description,
-}));
+const PROJECTS = PROJECTS_STATIC.map((project, index) => {
+  const images = getProjectImages(project.name);
+  return {
+    ...project,
+    date: i18n.projects.entries[index].date,
+    title: i18n.projects.entries[index].title,
+    description: i18n.projects.entries[index].description,
+    images: images, // Store images for later use
+  };
+});
+
+// Calculate starting indices for each project
+let imageIndexCounter = 0;
+const projectsWithStartIndices = PROJECTS.map((project) => {
+  const startImageIndex = imageIndexCounter;
+  imageIndexCounter += project.images.length;
+  return {
+    ...project,
+    startImageIndex: startImageIndex,
+  };
+});
 ---
 
 <div class="flex flex-col gap-y-16">
-  {
-    PROJECTS.map(({ image, title, description, tags, link, github, date }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              alt="Project image"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}{" "}
-            <time class="font-normal p-0 m-0 text-sm text-gray-600/80 dark:text-white/80 mb-2 relative">
-              {date}
-            </time>
-          </h3>
-
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-                  >
-                    <tag.icon class="size-4" />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
-            </div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  {i18n.projects.code}
-                </LinkButton>
-              )}
-              {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
-                  {i18n.projects.preview}
-                </LinkButton>
-              )}
-            </footer>
-          </div>
-        </div>
-      </article>
-    ))
-  }
+  {projectsWithStartIndices.map((project) => <ProjectItem project={project} />)}
 </div>

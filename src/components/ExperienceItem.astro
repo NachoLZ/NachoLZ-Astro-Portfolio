@@ -1,26 +1,31 @@
 ---
-import LinkInline from "./LinkInline.astro";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
 
 interface Props {
-  title: string;
-  company: string;
-  description: string;
-  link?: string;
-  date: string;
-  image?: string;
-  tags?: Array<{
-    name: string;
-    class: string;
-    icon: any;
-  }>;
-  github?: string;
+  experience: {
+    title: string;
+    company: string;
+    description: string;
+    link?: string;
+    date: string;
+    image?: string;
+    tags?: Array<{
+      name: string;
+      class: string;
+      icon: any;
+    }>;
+    github?: string;
+    images: any[];
+  };
 }
 
-const { title, company, description, link, date, image, tags, github } =
-  Astro.props;
+const { experience } = Astro.props;
+const { title, company, description, link, date, image, tags, github, images } =
+  experience;
+
+const hasCarouselImages = images.length > 0;
 ---
 
 <div
@@ -48,14 +53,38 @@ const { title, company, description, link, date, image, tags, github } =
     {
       image && (
         <div class="w-full">
-          <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              alt={`${title} at ${company}`}
-              class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
-          </div>
+          {hasCarouselImages ? (
+            <div id="carouselTargetList">
+              <a
+                href="#"
+                class="block"
+                onclick={`event.preventDefault(); document.dispatchEvent(new CustomEvent('open-carousel', { detail: { galleryId: '${company}' } }))`}
+              >
+                <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
+                  <img
+                    alt={`${title} at ${company}`}
+                    class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 hover:scale-105"
+                    loading="lazy"
+                    src={image}
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <div class="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white px-3 py-1 rounded-full text-sm">
+                      Ver galería ({images.length} fotos)
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ) : (
+            <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+              <img
+                alt={`${title} at ${company}`}
+                class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+            </div>
+          )}
         </div>
       )
     }
@@ -81,9 +110,7 @@ const { title, company, description, link, date, image, tags, github } =
     }
 
     <!-- Description -->
-    <div class="text-gray-600 dark:text-gray-300">
-      {description}
-    </div>
+    <div class="text-gray-600 dark:text-gray-300">{description}</div>
 
     <!-- Action Buttons -->
     <footer class="flex items-end justify-start gap-x-4">

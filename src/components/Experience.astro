@@ -2,6 +2,7 @@
 import ExperienceItem from "./ExperienceItem.astro";
 import { TAGS } from "./TechTags.astro";
 import { getI18N } from "../i18n";
+import { getExperienceImages } from "../utils/imageUtils";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -10,7 +11,7 @@ const i18n = getI18N({ currentLocale });
 const EXPERIENCE_STATIC = [
   {
     title: "CTO",
-    company: "BLOCK Capital",
+    company: "Block Capital",
     image: "/experience/bc.webp",
     tags: [
       TAGS.REMIX,
@@ -68,18 +69,22 @@ const EXPERIENCE_STATIC = [
 ];
 
 // Combine static data with translations
-const EXPERIENCE = EXPERIENCE_STATIC.map((exp, index) => ({
-  ...exp,
-  date: i18n.experience.entries[index].date,
-  description: i18n.experience.entries[index].description,
-}));
+const EXPERIENCE = EXPERIENCE_STATIC.map((exp, index) => {
+  const images = getExperienceImages(exp.company);
+  return {
+    ...exp,
+    date: i18n.experience.entries[index].date,
+    description: i18n.experience.entries[index].description,
+    images: images, // Store images for later use
+  };
+});
 ---
 
 <ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
       <li class="">
-        <ExperienceItem {...experience} />
+        <ExperienceItem experience={experience} />
       </li>
     ))
   }

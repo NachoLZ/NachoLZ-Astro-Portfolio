@@ -1,0 +1,8 @@
+---
+import { EmblaCarousel } from "./EmblaCarousel";
+import { EXPERIENCE_IMAGES, PROJECT_IMAGES } from "../utils/imageUtils";
+
+const allGalleries = { ...EXPERIENCE_IMAGES, ...PROJECT_IMAGES };
+---
+
+<EmblaCarousel galleries={allGalleries} client:load />
