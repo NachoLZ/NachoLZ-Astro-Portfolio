@@ -7,6 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "deploy-cf": "npm run build && wrangler pages deploy dist",
+    "deploy": "npx wrangler pages deploy dist --project-name=personal-portfolio",
     "astro": "astro"
   },
   "dependencies": {
