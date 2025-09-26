@@ -61,7 +61,11 @@ const {
               />
               <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 rounded-xl flex items-center justify-center">
                 <div class="opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white px-3 py-1 rounded-full text-sm">
-                  Ver galería ({images.length} fotos)
+                  {i18n.misc.gallery} ( {images.length}{" "}
+                  {images.length > 1
+                    ? i18n.misc.photo
+                    : i18n.misc.photo.slice(0, -1)}
+                  )
                 </div>
               </div>
             </div>
