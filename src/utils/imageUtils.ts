@@ -48,6 +48,11 @@ export const EXPERIENCE_IMAGES = {
   ]),
   "Price2Be": getImagesFromDirectory("/experience/Price2Be", [
     {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    {index: 4, extension: "webp"},
+    {index: 5, extension: "webp"},
+    {index: 6, extension: "webp"},
   ]),
 };
 
