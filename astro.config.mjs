@@ -1,12 +1,14 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import cloudflare from "@astrojs/cloudflare";
 
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt(), react()],
+  adapter: cloudflare(),
+  integrations: [tailwind(), robotsTxt(), react(), cloudflare()],
   site: "https://nacholz.com/",
   i18n: {
     defaultLocale: "es",
