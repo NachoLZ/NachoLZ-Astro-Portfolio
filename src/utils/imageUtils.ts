@@ -26,37 +26,38 @@ export function getImagesFromDirectory(basePath: string, imageFiles: Array<{inde
 // Experience images data
 export const EXPERIENCE_IMAGES = {
   "Block Capital": getImagesFromDirectory("/experience/Block%20Capital", [
-    {index: 1, extension: "jpg"},
-    {index: 2, extension: "jpg"},
-    {index: 3, extension: "jpg"},
-    {index: 4, extension: "jpg"},
-    {index: 5, extension: "jpg"},
-    {index: 6, extension: "jpg"},
-    {index: 7, extension: "jpg"},
-    {index: 8, extension: "jpg"},
-    {index: 9, extension: "jpg"},
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    {index: 4, extension: "webp"},
+    {index: 5, extension: "webp"},
+    {index: 6, extension: "webp"},
+    {index: 7, extension: "webp"},
+    {index: 8, extension: "webp"},
+    { index: 9, extension: "webp" },
+    {index: 10, extension: "webp"},
   ]),
   "Sireg Chile": getImagesFromDirectory("/experience/Sireg", [
-    {index: 1, extension: "jpg"},
-    {index: 2, extension: "jpg"},
-    {index: 3, extension: "jpg"},
-    {index: 4, extension: "jpg"},
-    {index: 5, extension: "jpg"},
-    {index: 6, extension: "jpg"},
-    {index: 7, extension: "jpg"},
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    {index: 4, extension: "webp"},
+    {index: 5, extension: "webp"},
+    {index: 6, extension: "webp"},
+    {index: 7, extension: "webp"},
   ]),
   "Price2Be": getImagesFromDirectory("/experience/Price2Be", [
-    {index: 1, extension: "jpg"},
+    {index: 1, extension: "webp"},
   ]),
 };
 
 // Project images data
 export const PROJECT_IMAGES = {
   "Handy God": getImagesFromDirectory("/projects/Handy%20God", [
-    {index: 1, extension: "png"},
-    {index: 2, extension: "jpg"},
-    {index: 3, extension: "png"},
-    {index: 4, extension: "png"},
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    {index: 4, extension: "webp"},
   ]),
 };
 
