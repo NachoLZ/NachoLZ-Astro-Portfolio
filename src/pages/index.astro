@@ -29,12 +29,12 @@ const pageDescription =
 
 <Layout title={pageTitle} description={pageDescription}>
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="py-16 md:py-36 pl-2 md:px-0">
       <Hero />
     </SectionContainer>
   </main>
   <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="experiencia" class="pl-4 md:px-0">
       <TitleSection>
         <Briefcase class="size-8" />
         {i18n.experience.title}
@@ -42,7 +42,7 @@ const pageDescription =
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
+    <SectionContainer id="proyectos" class="px-4 md:px-0">
       <TitleSection>
         <CodeIcon class="size-7" />
         {i18n.projects.title}
@@ -50,7 +50,7 @@ const pageDescription =
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
+    <SectionContainer id="sobre-mi" class="px-4 md:px-0">
       <TitleSection>
         <ProfileCheck class="size-8" />
         {i18n.about.title}
