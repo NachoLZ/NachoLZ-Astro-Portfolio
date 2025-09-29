@@ -11,7 +11,7 @@ export default defineConfig({
   integrations: [tailwind(), robotsTxt(), react(), cloudflare()],
   site: "https://nacholz.com/",
   i18n: {
-    defaultLocale: "es",
+    defaultLocale: "en",
     locales: ["es", "en"],
     routing: {
       prefixDefaultLocale: false,

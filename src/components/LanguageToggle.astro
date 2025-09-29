@@ -71,8 +71,8 @@ const LANGUAGES = [
 
   const getCurrentLanguageFromPath = () => {
     const path = window.location.pathname;
-    if (path.startsWith("/en")) return "en";
-    return "es"; // Default to Spanish
+    if (path.startsWith("/es")) return "es";
+    return "en"; // Default to English
   };
 
   const updateLanguageDisplay = (languagePreference) => {
@@ -80,7 +80,7 @@ const LANGUAGES = [
       element.style.scale = element.id === languagePreference ? "1" : "0";
     });
 
-    const languageName = languagePreference === "es" ? "Español" : "English";
+    const languageName = languagePreference === "en" ? "English" : "Español";
     currentLanguageText.innerText = languageName;
   };
 
@@ -113,8 +113,8 @@ const LANGUAGES = [
       const newLang = clickedText === "español" ? "es" : "en";
 
       // Navigate to the appropriate language route
-      if (newLang === "en") {
-        window.location.href = "/en/";
+      if (newLang === "es") {
+        window.location.href = "/es/";
       } else {
         window.location.href = "/";
       }

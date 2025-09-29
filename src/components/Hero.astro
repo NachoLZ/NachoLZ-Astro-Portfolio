@@ -41,7 +41,7 @@ const i18n = getI18N({ currentLocale });
     </span>{i18n.hero.description4}
   </p>
 
-  <nav class="flex flex-wrap gap-4 mt-8">
+  <nav class="flex flex-wrap gap-4 mt-8 md:flex-nowrap md:min-w-full">
     <SocialPill href="mailto:ignaciolizana96@gmail.com">
       <MailIcon class="size-4" />
       {i18n.hero.contact}
@@ -53,6 +53,23 @@ const i18n = getI18N({ currentLocale });
     <SocialPill href="https://github.com/NachoLZ">
       <GitHubIcon class="size-4" />
       GitHub
+    </SocialPill>
+    <SocialPill href="/cv.pdf" download>
+      <svg
+        class="size-4"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+        ></path>
+      </svg>
+      {i18n.hero.cv}
     </SocialPill>
   </nav>
 </div>
