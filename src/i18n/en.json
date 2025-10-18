@@ -45,6 +45,11 @@
         "code": "Code",
         "entries": [
             {
+                "date": "(2024)",
+                "title": "Modern Fintech Landing Page",
+                "description": "High-impact crypto-investment landing page that communicates trust, simplicity, and performance. This project was built as a fully responsive marketing site for Block Capital. The challenge was to merge a premium financial feel with startup-style modern design."
+            },
+            {
                 "date": "(2020)",
                 "title": "Handy God - 2D game in Unity",
                 "description": "A 2D platformer with physics developed in Unity where the player controls both a stickman (with WASD + Space to move and jump) and a floating hand (with the mouse). The hand can move or dismantle objects to clear obstacles or create paths, while the stickman advances through the level."

@@ -64,6 +64,13 @@ export const PROJECT_IMAGES = {
     {index: 3, extension: "webp"},
     {index: 4, extension: "webp"},
   ]),
+  "Modern Fintech Landing Page": getImagesFromDirectory("/projects/Modern%20Fintech%20Landing%20Page", [
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    { index: 4, extension: "webp" },
+    {index: 5, extension: "webp"},
+  ]),
 };
 
 // Helper to get images for a specific experience/project

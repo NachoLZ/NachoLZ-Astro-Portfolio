@@ -45,6 +45,11 @@
         "code": "Código",
         "entries": [
             {
+                "date": "(2024)",
+                "title": "Landing Page Fintech Moderna",
+                "description": "Landing page de alto impacto para inversiones en criptomonedas, enfocada en transmitir confianza, simplicidad y rendimiento. Este proyecto fue desarrollado como un sitio de marketing completamente responsivo para Block Capital. El reto consistió en combinar una estética financiera premium con un diseño moderno propio de startups."
+            },
+            {
                 "date": "(2020)",
                 "title": "Handy God - Juego 2D en Unity",
                 "description": "Un plataformero 2D con físicas desarrollado en Unity donde el jugador controla tanto a un stickman (con WASD + Espacio para moverse y saltar) como a una mano flotante (con el ratón). La mano puede mover o desarmar objetos para mover obstáculos o crear caminos, mientras el stickman avanza por el nivel."
