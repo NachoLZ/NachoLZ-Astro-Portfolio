@@ -71,6 +71,14 @@ export const PROJECT_IMAGES = {
     { index: 4, extension: "webp" },
     {index: 5, extension: "webp"},
   ]),
+  "Video Overlay Pipeline and Subtitle Editor": getImagesFromDirectory("/projects/VideoClipPy", [
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    { index: 4, extension: "webp" },
+    { index: 5, extension: "webp" },
+    {index: 6, extension: "webp"},
+  ]),
 };
 
 // Helper to get images for a specific experience/project

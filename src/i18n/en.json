@@ -45,6 +45,11 @@
         "code": "Code",
         "entries": [
             {
+                "date": "(2025)",
+                "title": "Video, Audio, and Subtitle Overlay Editing App",
+                "description": "An interactive editing app that lets you transform a simple talking-head video into an engaging Instagram Reel or TikTok clip. By highlighting specific subtitle segments, you can seamlessly add corresponding video clips and/or audio overlays to those moments, all managed through a sleek, modern React web interface."
+            },
+            {
                 "date": "(2024)",
                 "title": "Modern Fintech Landing Page",
                 "description": "High-impact crypto-investment landing page that communicates trust, simplicity, and performance. This project was built as a fully responsive marketing site for Block Capital. The challenge was to merge a premium financial feel with startup-style modern design."
