@@ -1,5 +1,5 @@
 // Helper function to get images from a directory
-export function getImagesFromDirectory(basePath: string, imageFiles: Array<{index: number, extension: string}>): Array<{
+export function getImagesFromDirectory(basePath: string, imageFiles: Array<{index?: number, filename?: string, extension: string}>): Array<{
   src: string;
   alt: string;
   format: "webp" | "jpg" | "png";
@@ -10,9 +10,11 @@ export function getImagesFromDirectory(basePath: string, imageFiles: Array<{inde
   const images = [];
 
   for (const file of imageFiles) {
+    const fileName = file.filename ? `${file.filename}.${file.extension}` : `${file.index}.${file.extension}`;
+    const altText = file.filename || `Image ${file.index}`;
     images.push({
-      src: `${basePath}/${file.index}.${file.extension}`,
-      alt: `Image ${file.index}`,
+      src: `${basePath}/${fileName}`,
+      alt: altText,
       format: file.extension as "webp" | "jpg" | "png",
       width: 1200,
       height: 800,
@@ -58,6 +60,24 @@ export const EXPERIENCE_IMAGES = {
 
 // Project images data
 export const PROJECT_IMAGES = {
+  "Yoho": getImagesFromDirectory("/projects/Yoho", [
+    { filename: "home", extension: "webp" },
+    { filename: "experiences page", extension: "webp" },
+    { filename: "cart", extension: "webp" },
+    { filename: "checkyourgify", extension: "webp" },
+    { filename: "experience details 2", extension: "webp" },
+    { filename: "experience details mobile", extension: "webp" },
+    { filename: "experience details tablet", extension: "webp" },
+    { filename: "experience details", extension: "webp" },
+    { filename: "experiencedetails figma", extension: "webp" },
+    { filename: "experiences sizes figma", extension: "webp" },
+    { filename: "faqs", extension: "webp" },
+    { filename: "favourites", extension: "webp" },
+    { filename: "full figma", extension: "webp" },
+    { filename: "home figma", extension: "webp" },
+    { filename: "howitworks", extension: "webp" },
+    { filename: "workwithus tablet", extension: "webp" },
+  ]),
   "Handy God": getImagesFromDirectory("/projects/Handy%20God", [
     {index: 1, extension: "webp"},
     {index: 2, extension: "webp"},

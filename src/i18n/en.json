@@ -45,7 +45,12 @@
         "code": "Code",
         "entries": [
             {
-                "date": "(2025)",
+                "date": "(Oct-Nov 2025)",
+                "title": "Marketplace Optimizations/Fixes, PSQL, Next.js & Figma implementation",
+                "description": "Expert-level contract improving a production booking platform and admin dashboard. The work included fixing backend critical bugs, optimizing performance, and integrating complex Figma UI designs into scalable React components. Updated 15+ routes, added new features like a CMS banner and redesigned product cards, connected real-time database data, and refactored responsive layouts with more than 300 visual improvements across mobile, tablet and desktop."
+            },
+            {
+                "date": "(Oct 2025)",
                 "title": "Video, Audio, and Subtitle Overlay Editing App",
                 "description": "An interactive editing app that lets you transform a simple talking-head video into an engaging Instagram Reel or TikTok clip. By highlighting specific subtitle segments, you can seamlessly add corresponding video clips and/or audio overlays to those moments, all managed through a sleek, modern React web interface."
             },

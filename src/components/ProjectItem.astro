@@ -10,8 +10,8 @@ const i18n = getI18N({ currentLocale });
 interface Props {
   project: {
     name: string;
-    link: string;
-    github: string;
+    link?: string;
+    github?: string;
     image: string;
     tags: Array<{
       name: string;
@@ -96,13 +96,13 @@ const {
       </time>
     </h3>
 
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
+    <div class="flex flex-wrap mt-2 gap-2">
+      <ul class="flex flex-row flex-wrap gap-2">
         {
           tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 whitespace-nowrap`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}

@@ -45,7 +45,12 @@
         "code": "Código",
         "entries": [
             {
-                "date": "(2025)",
+                "date": "(Oct-Nov 2025)",
+                "title": "Optimizaciones/Correcciones de Marketplace, implementación de PSQL, Next.js y Figma",
+                "description": "Mejora de plataforma de reservas en producción y panel de administración. El trabajo incluyó la corrección de errores críticos en el backend, optimización del rendimiento e integración de diseños complejos de UI de Figma en componentes escalables de React. Se actualizaron más de 15 rutas, se añadieron nuevas características como un banner CMS y tarjetas de producto rediseñadas, se conectaron datos de base de datos en tiempo real y se refactorizaron diseños responsivos con más de 300 mejoras visuales en móvil, tablet y escritorio."
+            },
+            {
+                "date": "(Oct 2025)",
                 "title": "Aplicación de Edición con Superposición de Video, Subtítulos y Audio",
                 "description": "Permite transformar un video simple tipo talking-head en un clip atractivo en formato Instagram Reel o TikTok. Al resaltar segmentos específicos de los subtítulos, puedes añadir fácilmente clips de video y/o superposiciones de audio sincronizadas con esos momentos. Todo el proceso se gestiona a través de una interfaz web moderna, elegante y fácil de usar desarrollada en React."
             },
