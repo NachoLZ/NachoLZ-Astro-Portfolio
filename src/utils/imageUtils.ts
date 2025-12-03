@@ -60,6 +60,19 @@ export const EXPERIENCE_IMAGES = {
 
 // Project images data
 export const PROJECT_IMAGES = {
+  "SS21.art": getImagesFromDirectory("/projects/ss21", [
+    { filename: "home", extension: "webp" },
+    { filename: "figma", extension: "webp" },
+    { filename: "home phone", extension: "webp" },
+    { filename: "explore desktop", extension: "webp" },
+    { filename: "explore mobile", extension: "webp" },
+    { filename: "login", extension: "webp" },
+    { filename: "manifesto", extension: "webp" },
+    { filename: "user panel", extension: "webp" },
+    { filename: "user panel mobile", extension: "webp" },
+    { filename: "admin panel", extension: "webp" },
+    { filename: "admin panel users", extension: "webp" },
+  ]),
   "Yoho": getImagesFromDirectory("/projects/Yoho", [
     { filename: "home", extension: "webp" },
     { filename: "experiences page", extension: "webp" },

@@ -45,6 +45,11 @@
         "code": "Código",
         "entries": [
             {
+                "date": "(Nov 2025)",
+                "title": "MVP de Identidad Web3 y Panel Animado con UI desde Figma",
+                "description": "SS21.art es un taller digital diseñado para redefinir la identidad en línea a través del anonimato y la elección. Permite a los usuarios reclamar \"Codenames\" únicos. La plataforma incluye un panel seguro para el seguimiento de activos Web3. Cuenta con una interfaz altamente inmersiva y animada (\"Highway to the Moon\") que prioriza la privacidad, ofreciendo un espacio donde la identidad se elige, no se impone."
+            },
+            {
                 "date": "(Oct-Nov 2025)",
                 "title": "Optimizaciones/Correcciones de Marketplace, implementación de PSQL, Next.js y Figma",
                 "description": "Mejora de plataforma de reservas en producción y panel de administración. El trabajo incluyó la corrección de errores críticos en el backend, optimización del rendimiento e integración de diseños complejos de UI de Figma en componentes escalables de React. Se actualizaron más de 15 rutas, se añadieron nuevas características como un banner CMS y tarjetas de producto rediseñadas, se conectaron datos de base de datos en tiempo real y se refactorizaron diseños responsivos con más de 300 mejoras visuales en móvil, tablet y escritorio."

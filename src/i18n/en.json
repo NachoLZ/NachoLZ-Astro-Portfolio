@@ -45,6 +45,11 @@
         "code": "Code",
         "entries": [
             {
+                "date": "(Nov 2025)",
+                "title": "Web3 Identity Workshop & Asset Dashboard with UI from Figma",
+                "description": "SS21.art is a digital workshop designed to reframe online identity through anonymity and choice. It allows users to claim unique \"Codenames\". The platform includes a secure dashboard for tracking Web3 assets. It features a highly immersive, animated UI (\"Highway to the Moon\") that prioritizes privacy, offering a space where identity is chosen, not imposed."
+            },
+            {
                 "date": "(Oct-Nov 2025)",
                 "title": "Marketplace Optimizations/Fixes, PSQL, Next.js & Figma implementation",
                 "description": "Expert-level contract improving a production booking platform and admin dashboard. The work included fixing backend critical bugs, optimizing performance, and integrating complex Figma UI designs into scalable React components. Updated 15+ routes, added new features like a CMS banner and redesigned product cards, connected real-time database data, and refactored responsive layouts with more than 300 visual improvements across mobile, tablet and desktop."
