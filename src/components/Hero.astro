@@ -6,6 +6,7 @@ import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
 import { getI18N } from "../i18n";
+import Upwork from "./icons/Upwork.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -41,7 +42,7 @@ const i18n = getI18N({ currentLocale });
     </span>{i18n.hero.description4}
   </p>
 
-  <nav class="flex flex-wrap gap-4 mt-8 md:flex-nowrap md:min-w-full">
+  <nav class="flex flex-wrap gap-4 mt-8 md:min-w-full">
     <SocialPill href="mailto:ignaciolizana96@gmail.com">
       <MailIcon class="size-4" />
       {i18n.hero.contact}
@@ -53,6 +54,10 @@ const i18n = getI18N({ currentLocale });
     <SocialPill href="https://github.com/NachoLZ">
       <GitHubIcon class="size-4" />
       GitHub
+    </SocialPill>
+    <SocialPill href="https://www.upwork.com/freelancers/~01925090a3b319f0de">
+      <Upwork class="size-4" />
+      Upwork
     </SocialPill>
     <SocialPill href="/cv.pdf" download>
       <svg
