@@ -22,6 +22,10 @@
         "code": "Código",
         "entries": [
             {
+                "date": "Dic 2025 - Feb 2026",
+                "description": "Lideré la ejecución técnica en múltiples plataformas de streaming para clientes en un entorno OTT B2B, sirviendo de puente entre los equipos de producto, negocio e ingeniería, incluyendo el desarrollo del nuevo sitio web corporativo y páginas de aterrizaje, coordinando la entrega del frontend y la integración con el CMS."
+            },
+            {
                 "date": "Marzo 2023 – Agosto 2025",
                 "description": "Dirigí el desarrollo de una plataforma de inversión cripto desde cero hasta producción. Diseñé arquitecturas full-stack, optimicé despliegues en la nube (GCP) y creé interfaces responsivas en React y Tailwind. Logramos entrar en Lanzadera, atraer 100+ early adopters y +1M USD en fondos administrados."
             },

@@ -27,6 +27,12 @@ export function getImagesFromDirectory(basePath: string, imageFiles: Array<{inde
 
 // Experience images data
 export const EXPERIENCE_IMAGES = {
+  "Alteox": getImagesFromDirectory("/experience/Alteox", [
+    { filename: "figma", extension: "webp" },
+    { filename: "hotelmobile", extension: "webp" },
+    { filename: "hoteltv", extension: "webp" },
+    { filename: "hoteltv2", extension: "webp" },
+  ]),
   "Block Capital": getImagesFromDirectory("/experience/Block%20Capital", [
     {index: 1, extension: "webp"},
     {index: 2, extension: "webp"},
