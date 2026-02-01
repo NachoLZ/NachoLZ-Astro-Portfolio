@@ -8,7 +8,7 @@
     "hero": {
         "greeting": "Hi, I'm Ignacio",
         "title": "Computer Science Engineer",
-        "description1": "7+ years developing software",
+        "description1": "8+ years developing software",
         "description2": "Computer Science Engineer and Full-Stack Developer",
         "description3": "currently in Valencia, Spain",
         "description4": "Specialized in creating modern and scalable web apps, with expertise in React, Tailwind, and TypeScript.",
@@ -22,7 +22,7 @@
         "code": "Code",
         "entries": [
             {
-                "date": "Dec 2025 - Feb 2026",
+                "date": "November 2025 - February 2026",
                 "description": "Led technical execution across multiple client-facing streaming platforms in a B2B OTT environment, bridging product, business, and engineering teams, including development of new corporate website and landing pages, coordinating frontend delivery and CMS integration."
             },
             {
