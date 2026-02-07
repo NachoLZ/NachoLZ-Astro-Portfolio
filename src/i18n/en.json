@@ -22,6 +22,10 @@
         "code": "Code",
         "entries": [
             {
+                "date": "November 2025 - Current",
+                "description": "Co-founded and led the development of a conversational AI platform for training centers that automates student support, lead capture, operational workflows, and document validation. Designed the full-stack architecture, implemented RAG-based knowledge systems and custom made CRM. Selected for Lanzadera and launched in real educational environments to support product validation and early growth."
+            },
+            {
                 "date": "November 2025 - February 2026",
                 "description": "Led technical execution across multiple client-facing streaming platforms in a B2B OTT environment, bridging product, business, and engineering teams, including development of new corporate website and landing pages, coordinating frontend delivery and CMS integration."
             },
