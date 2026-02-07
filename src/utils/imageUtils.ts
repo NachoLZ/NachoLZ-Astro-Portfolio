@@ -33,6 +33,14 @@ export const EXPERIENCE_IMAGES = {
     { filename: "hoteltv", extension: "webp" },
     { filename: "hoteltv2", extension: "webp" },
   ]),
+  "Educ.AI": getImagesFromDirectory("/experience/EducAI", [
+    { filename: "dashboard", extension: "webp" },
+    { filename: "leads kanban", extension: "webp" },
+    { filename: "chat", extension: "webp" },
+     { filename: "educiadmeo", extension: "webp" },
+    { filename: "cursos lista", extension: "webp" },
+
+  ]),
   "Block Capital": getImagesFromDirectory("/experience/Block%20Capital", [
     {index: 1, extension: "webp"},
     {index: 2, extension: "webp"},

@@ -22,6 +22,10 @@
         "code": "Código",
         "entries": [
             {
+                "date": "Noviembre 2025 - Actualidad",
+                "description": "Cofundé y lideré el desarrollo de una plataforma de IA conversacional para centros de formación que automatiza la atención al estudiante, captación de leads, flujos operativos y validación de documentos. Diseñé la arquitectura full-stack, implementé sistemas de conocimiento basados en RAG y un CRM a medida. Seleccionados por Lanzadera y lanzados en entornos educativos reales para apoyar la validación del producto y el crecimiento temprano."
+            },
+            {
                 "date": "Noviembre 2025 - Febrero 2026",
                 "description": "Lideré la ejecución técnica en múltiples plataformas de streaming para clientes en un entorno OTT B2B, sirviendo de puente entre los equipos de producto, negocio e ingeniería, incluyendo el desarrollo del nuevo sitio web corporativo y páginas de aterrizaje, coordinando la entrega del frontend y la integración con el CMS."
             },
