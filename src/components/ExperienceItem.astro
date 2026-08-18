@@ -29,6 +29,8 @@ const { title, company, description, link, date, image, tags, github, images } =
   experience;
 
 const hasCarouselImages = images.length > 0;
+const isZemobile = company && company.toString().toLowerCase().includes("zemobile");
+const showImages = image && !isZemobile;
 ---
 
 <div
@@ -54,7 +56,7 @@ const hasCarouselImages = images.length > 0;
   >
     <!-- Image Preview Section -->
     {
-      image && (
+      showImages && (
         <div class="w-full">
           {hasCarouselImages ? (
             <div id="carouselTargetList">

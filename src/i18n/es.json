@@ -11,7 +11,7 @@
         "description1": "+8 años desarrollando software",
         "description2": "Ingeniero Civil Informático y Full-Stack Developer",
         "description3": "actualmente en Valencia, España",
-        "description4": "Especializado en crear aplicaciones web modernas, con dominio de React, Tailwind y TypeScript.",
+        "description4": "Especializado en crear aplicaciones web modernas, con dominio de React, Tailwind, Node.js y TypeScript.",
         "available": "Disponible para empleo y proyectos",
         "contact": "Contáctame",
         "cv": "Descargar CV"
@@ -22,7 +22,11 @@
         "code": "Código",
         "entries": [
             {
-                "date": "Noviembre 2025 - Actualidad",
+                "date": "Febrero 2026 – Junio 2026",
+                "description": "Diseñé e implementé un SaaS multi-marca mediante una migración Next.js/Supabase sin tiempo de inactividad, integrando PostgreSQL con escritura paralela, pagos end-to-end con Stripe, políticas RLS estrictas y más de 30 flujos de integración con Make.com."
+            },
+            {
+                "date": "Octubre 2025 - Abril 2026",
                 "description": "Cofundé y lideré el desarrollo de una plataforma de IA conversacional para centros de formación que automatiza la atención al estudiante, captación de leads, flujos operativos y validación de documentos. Diseñé la arquitectura full-stack, implementé sistemas de conocimiento basados en RAG y un CRM a medida. Seleccionados por Lanzadera y lanzados en entornos educativos reales para apoyar la validación del producto y el crecimiento temprano."
             },
             {
