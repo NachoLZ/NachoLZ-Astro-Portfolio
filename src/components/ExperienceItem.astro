@@ -29,7 +29,8 @@ const { title, company, description, link, date, image, tags, github, images } =
   experience;
 
 const hasCarouselImages = images.length > 0;
-const isZemobile = company && company.toString().toLowerCase().includes("zemobile");
+const isZemobile =
+  company && company.toString().toLowerCase().includes("zemobile");
 const showImages = image && !isZemobile;
 ---
 
