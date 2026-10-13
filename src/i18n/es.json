@@ -22,7 +22,7 @@
     },
     "experience": {
         "title": "Experiencia laboral",
-        "preview": "Vista previa",
+        "preview": "Ver sitio",
         "code": "Código",
         "caseStudy": "Detalles del proyecto",
         "upworkProfile": "Perfil de Upwork",
@@ -74,7 +74,7 @@
     },
     "projects": {
         "title": "Proyectos",
-        "preview": "Vista previa",
+        "preview": "Ver sitio",
         "code": "Código",
         "caseStudy": "Detalles del proyecto",
         "entries": [

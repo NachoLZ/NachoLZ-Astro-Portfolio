@@ -22,7 +22,7 @@
     },
     "experience": {
         "title": "Work Experience",
-        "preview": "Preview",
+        "preview": "Live site",
         "code": "Code",
         "caseStudy": "Project details",
         "upworkProfile": "Upwork profile",
@@ -74,7 +74,7 @@
     },
     "projects": {
         "title": "Projects",
-        "preview": "Preview",
+        "preview": "Live site",
         "code": "Code",
         "caseStudy": "Project details",
         "entries": [
