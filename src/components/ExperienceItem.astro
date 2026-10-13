@@ -2,6 +2,8 @@
 import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
+import DocumentIcon from "./icons/Document.astro";
+import UpworkIcon from "./icons/Upwork.astro";
 import { getI18N } from "../i18n";
 
 interface Props {
@@ -10,6 +12,7 @@ interface Props {
     company: string;
     description: string;
     link?: string;
+    location: string;
     date: string;
     image?: string;
     tags?: Array<{
@@ -18,6 +21,9 @@ interface Props {
       icon: any;
     }>;
     github?: string;
+    caseStudy?: string;
+    upwork?: string;
+    reviews?: string;
     images: any[];
   };
 }
@@ -25,19 +31,30 @@ interface Props {
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const { experience } = Astro.props;
-const { title, company, description, link, date, image, tags, github, images } =
-  experience;
+const {
+  title,
+  company,
+  description,
+  link,
+  location,
+  date,
+  image,
+  tags,
+  github,
+  caseStudy,
+  upwork,
+  reviews,
+  images,
+} = experience;
 
 const hasCarouselImages = images.length > 0;
-const isZemobile =
-  company && company.toString().toLowerCase().includes("zemobile");
-const showImages = image && !isZemobile;
+const showImages = Boolean(image);
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] lg:grid-cols-5 lg:gap-10"
 >
-  <div class="relative pb-12 md:col-span-2">
+  <div class="relative pb-12 lg:col-span-2">
     <div class="sticky top-24">
       <span
         class="text-yellow-700 dark:text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
@@ -50,13 +67,16 @@ const showImages = image && !isZemobile;
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
         {company}
       </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+      <p class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+        {location}
+      </p>
+      <time class="block p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
         >{date}</time
       >
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-4 pb-4 text-black dark:text-gray-300 md:col-span-3"
+    class="relative flex flex-col gap-4 pb-4 text-black dark:text-gray-300 lg:col-span-3"
   >
     <!-- Image Preview Section -->
     {
@@ -72,7 +92,7 @@ const showImages = image && !isZemobile;
                 <div class="relative group">
                   <div class="relative flex flex-col transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
                     <img
-                      alt={`${title} at ${company}`}
+                      alt={`${company} – ${title}`}
                       class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 group-hover:scale-105"
                       loading="lazy"
                       src={image}
@@ -93,7 +113,7 @@ const showImages = image && !isZemobile;
           ) : (
             <div class="relative flex flex-col items-center gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
               <img
-                alt={`${title} at ${company}`}
+                alt={`${company} – ${title}`}
                 class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 hover:scale-105"
                 loading="lazy"
                 src={image}
@@ -125,10 +145,13 @@ const showImages = image && !isZemobile;
     }
 
     <!-- Description -->
-    <div class="text-black dark:text-gray-300">{description}</div>
+    <div
+      class="text-black dark:text-gray-300 [&>strong]:font-semibold [&>strong]:text-gray-900 dark:[&>strong]:text-white"
+      set:html={description}
+    />
 
     <!-- Action Buttons -->
-    <footer class="flex items-end justify-start gap-x-4">
+    <footer class="flex flex-wrap items-end justify-start gap-3">
       {
         github && (
           <LinkButton href={github}>
@@ -142,6 +165,38 @@ const showImages = image && !isZemobile;
           <LinkButton href={link}>
             <Link class="size-4" />
             {i18n.experience.preview}
+          </LinkButton>
+        )
+      }
+      {
+        caseStudy && (
+          <LinkButton
+            href={caseStudy}
+            data-pdf-viewer
+            data-pdf-title={`${company} – ${i18n.experience.caseStudy}`}
+          >
+            <DocumentIcon class="size-5" />
+            {i18n.experience.caseStudy}
+          </LinkButton>
+        )
+      }
+      {
+        upwork && (
+          <LinkButton href={upwork}>
+            <UpworkIcon class="size-5" />
+            {i18n.experience.upworkProfile}
+          </LinkButton>
+        )
+      }
+      {
+        reviews && (
+          <LinkButton
+            href={reviews}
+            data-pdf-viewer
+            data-pdf-title={`${company} – ${i18n.experience.reviews}`}
+          >
+            <DocumentIcon class="size-5" />
+            {i18n.experience.reviews}
           </LinkButton>
         )
       }

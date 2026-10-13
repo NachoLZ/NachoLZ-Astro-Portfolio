@@ -10,9 +10,24 @@ const i18n = getI18N({ currentLocale });
 // Static data that doesn't need translation
 const PROJECTS_STATIC = [
   {
+    name: "Educ.IA",
+    image: "/experience/educai.webp",
+    link: "https://educia.malkuth.tech/",
+    caseStudy: "/case-studies/educia.pdf",
+    tags: [
+      TAGS.REACT,
+      TAGS.NODEJS,
+      TAGS.TYPESCRIPT,
+      TAGS.SUPABASE,
+      TAGS.POSTGRESQL,
+      TAGS.RAG,
+      TAGS.GCP_VISION,
+    ],
+  },
+  {
     name: "SS21.art",
     image: "/projects/ss21/pf cover.webp",
-    link: "https://ss21.art",
+    caseStudy: "/case-studies/ss21.pdf",
     tags: [
       TAGS.REACT_ROUTER,
       TAGS.REACT,
@@ -29,6 +44,7 @@ const PROJECTS_STATIC = [
     name: "Yoho",
     image: "/projects/Yoho/cover.webp",
     link: "https://yohogift.ca/",
+    caseStudy: "/case-studies/yoho.pdf",
     tags: [
       TAGS.NEXT,
       TAGS.POSTGRESQL,

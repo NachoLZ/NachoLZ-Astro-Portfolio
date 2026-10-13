@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
 import Carousel from "../components/Carousel.astro";
+import { PdfViewer } from "../components/PdfViewer";
+import { getI18N } from "../i18n";
 
 interface Props {
   title: string;
@@ -13,6 +15,11 @@ interface Props {
 const { description, title } = Astro.props;
 
 const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const site = Astro.site ?? "https://nacholz.com/";
+const pageUrl = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL("/portfolio.webp", site).href;
 ---
 
 <!doctype html>
@@ -27,9 +34,13 @@ const { currentLocale } = Astro;
     <meta name="darkreader-lock" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="/porfolio.webp" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={pageUrl} />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <ViewTransitions />
   </head>
 
@@ -44,6 +55,7 @@ const { currentLocale } = Astro;
     <slot />
     <Footer />
     <Carousel />
+    <PdfViewer client:idle labels={i18n.misc.pdfViewer} />
     <style is:global>
       :root {
         color-scheme: light dark;

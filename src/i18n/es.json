@@ -1,4 +1,8 @@
 {
+    "meta": {
+        "title": "Ignacio Lizana – Senior Full-Stack Engineer",
+        "description": "Ignacio Lizana – Senior Full-Stack Engineer (React, TypeScript, Next.js, Node.js, PostgreSQL, Supabase). Más de 7 años creando productos fintech, SaaS e IA. En Valencia, España."
+    },
     "nav": {
         "experience": "Experiencia",
         "projects": "Proyectos",
@@ -7,47 +11,64 @@
     },
     "hero": {
         "greeting": "Hola, soy Ignacio",
-        "title": "Ingeniero Civil Informático",
-        "description1": "+8 años desarrollando software",
-        "description2": "Ingeniero Civil Informático y Full-Stack Developer",
-        "description3": "actualmente en Valencia, España",
-        "description4": "Especializado en crear aplicaciones web modernas, con dominio de React, Tailwind, Node.js y TypeScript.",
+        "description1": "Senior Full-Stack Engineer con más de 7 años llevando plataformas a producción de principio a fin",
+        "description2": "Ingeniero Civil Informático",
+        "description3": "en Valencia, España",
+        "description4": "Especializado en React, TypeScript, Next.js, Node.js, PostgreSQL y Supabase.",
         "available": "Disponible para empleo y proyectos",
         "contact": "Contáctame",
-        "cv": "Descargar CV"
+        "cv": "Descargar CV",
+        "cvFile": "/cv-es.pdf"
     },
     "experience": {
         "title": "Experiencia laboral",
         "preview": "Vista previa",
         "code": "Código",
+        "caseStudy": "Detalles del proyecto",
+        "upworkProfile": "Perfil de Upwork",
+        "reviews": "Reseñas de clientes",
         "entries": [
             {
-                "date": "Febrero 2026 – Junio 2026",
-                "description": "Diseñé e implementé un SaaS multi-marca mediante una migración Next.js/Supabase sin tiempo de inactividad, integrando PostgreSQL con escritura paralela, pagos end-to-end con Stripe, políticas RLS estrictas y más de 30 flujos de integración con Make.com."
+                "role": "Desarrollador Full-Stack Freelance",
+                "location": "Remoto",
+                "date": "Oct 2025 – Actualidad",
+                "description": "Top Rated en Upwork (100% Job Success, 5.0★). Desarrollos en producción, auditorías y correcciones para clientes SaaS con Next.js, Supabase y Stripe. Desarrollo de un kiosco interactivo para una exposición de arte en vivo y ~300 ajustes de UI y mejoras del panel de administración en un marketplace de reservas."
             },
             {
-                "date": "Octubre 2025 - Abril 2026",
-                "description": "Cofundé y lideré el desarrollo de una plataforma de IA conversacional para centros de formación que automatiza la atención al estudiante, captación de leads, flujos operativos y validación de documentos. Diseñé la arquitectura full-stack, implementé sistemas de conocimiento basados en RAG y un CRM a medida. Seleccionados por Lanzadera y lanzados en entornos educativos reales para apoyar la validación del producto y el crecimiento temprano."
+                "role": "Senior Full-Stack Developer",
+                "location": "Barcelona · Freelance, remoto",
+                "date": "Feb 2026 – May 2026",
+                "description": "Diseño de un SaaS multi-marca con migración sin interrupciones a Next.js/Supabase: escrituras paralelas en PostgreSQL, pagos con Stripe, RLS estricto y más de 30 flujos de API en Make.com."
             },
             {
-                "date": "Noviembre 2025 - Febrero 2026",
-                "description": "Lideré la ejecución técnica en múltiples plataformas de streaming para clientes en un entorno OTT B2B, sirviendo de puente entre los equipos de producto, negocio e ingeniería, incluyendo el desarrollo del nuevo sitio web corporativo y páginas de aterrizaje, coordinando la entrega del frontend y la integración con el CMS."
+                "role": "Lead Software Engineer",
+                "location": "Luxemburgo · Jornada completa, remoto",
+                "date": "Nov 2025 – Feb 2026",
+                "description": "Liderazgo técnico en varias plataformas de streaming B2B (OTT), coordinando producto, negocio e ingeniería. Liderazgo de la nueva web corporativa y las landings de producto (React, TypeScript, Strapi CMS), coordinación de tareas front-end y code reviews según Figma, y apoyo en la depuración del back-end para estabilizar los entornos de producción."
             },
             {
-                "date": "Marzo 2023 – Septiembre 2025",
-                "description": "Dirigí el desarrollo de una plataforma de inversión cripto desde cero hasta producción. Diseñé arquitecturas full-stack, optimicé despliegues en la nube (GCP) y creé interfaces responsivas en React y Tailwind. Logramos entrar en Lanzadera, atraer 100+ early adopters y +1.1M USD en fondos administrados."
+                "role": "CTO & Co-Founder",
+                "location": "Santiago, Chile y Valencia, España",
+                "date": "Mar 2023 – Sept 2025",
+                "description": "Lanzamiento de la primera versión en producción de una plataforma de inversión en criptomonedas en menos de 6 meses, con <strong>más de 100 usuarios pioneros</strong> y <strong>más de 1,1 M USD en inversiones gestionadas</strong>. Definición de la hoja de ruta técnica y la arquitectura (Remix/React Router, TypeScript, Node.js, PostgreSQL, Docker, Google Cloud), reducción del tiempo de despliegue a menos de 5 minutos y aumento del 27% en el tiempo de sesión móvil. Aceptación en la <strong>aceleradora Lanzadera</strong>."
             },
             {
-                "date": "Febrero 2024 – Marzo 2025",
-                "description": "Desarrollé una app móvil y panel de control en tiempo real adoptados por 150+ inspectores municipales. Lideré la arquitectura y desarrollo, logrando reducir en un 33% los tiempos de respuesta ante emergencias."
+                "role": "Lead Software Engineer (Freelance, media jornada)",
+                "location": "Santiago, Chile",
+                "date": "Feb 2024 – Mar 2025",
+                "description": "Diseño y lanzamiento de una app móvil y un panel de control en tiempo real para inspectores de seguridad municipal, adoptados por <strong>más de 150 agentes de campo</strong> en el primer mes y <strong>reduciendo un 33% el tiempo de respuesta ante emergencias</strong>. Liderazgo de la arquitectura y la integración back-end (TypeScript, Remix/React Router, Node.js, PostgreSQL, Docker, Google Cloud)."
             },
             {
-                "date": "Diciembre 2021 – Julio 2022",
-                "description": "Construí aplicaciones empresariales en .NET Core y React que escalaron a 100+ usuarios diarios. Migré sistemas legacy a arquitectura basada en componentes, reduciendo el tiempo de mantenimiento de semanas a días."
+                "role": "Desarrollador Full-Stack y consultor",
+                "location": "Santiago, Chile",
+                "date": "Dic 2021 – Jul 2022",
+                "description": "Desarrollo de aplicaciones empresariales en .NET Core y React que escalaron a más de 100 usuarios diarios. Migración de sistemas legacy a una arquitectura basada en componentes, reduciendo el tiempo de mantenimiento de semanas a días."
             },
             {
-                "date": "Marzo 2021 – Marzo 2022",
-                "description": "Lideré el frontend en React y Tailwind de un sistema de recomendación de precios basado en ML. Creé dashboards de tendencias de mercado y ventas. El proyecto fue premiado como Mejor Proyecto de IA y Ciencia de Datos en la USM Software Fair."
+                "role": "Front-End Lead",
+                "location": "Santiago, Chile",
+                "date": "Abr 2021 – Mar 2022",
+                "description": "Liderazgo del frontend en React y Tailwind de un sistema de recomendación de precios basado en ML. Creación de dashboards de tendencias de mercado y ventas. Proyecto premiado como Mejor Proyecto de IA y Ciencia de Datos en la Feria de Software de la USM."
             }
         ]
     },
@@ -55,16 +76,22 @@
         "title": "Proyectos",
         "preview": "Vista previa",
         "code": "Código",
+        "caseStudy": "Detalles del proyecto",
         "entries": [
             {
-                "date": "(Nov 2025)",
-                "title": "MVP de Identidad Web3 y Panel Animado con UI desde Figma",
-                "description": "SS21.art es un taller digital diseñado para redefinir la identidad en línea a través del anonimato y la elección. Permite a los usuarios reclamar \"Codenames\" únicos. La plataforma incluye un panel seguro para el seguimiento de activos Web3. Cuenta con una interfaz altamente inmersiva y animada (\"Highway to the Moon\") que prioriza la privacidad, ofreciendo un espacio donde la identidad se elige, no se impone."
+                "date": "(Nov 2025 – Abr 2026)",
+                "title": "Educ.IA – Plataforma de IA para matrículas en web y WhatsApp (proyecto paralelo)",
+                "description": "Plataforma de IA conversacional para centros de formación: agentes de IA en web y WhatsApp que atienden al alumnado y captan leads 24/7, base de conocimiento con RAG y validación de documentos por OCR con Google Cloud Vision. Seleccionado por la aceleradora Lanzadera."
             },
             {
-                "date": "(Oct-Nov 2025)",
-                "title": "Optimizaciones/Correcciones de Marketplace, implementación de PSQL, Next.js y Figma",
-                "description": "Mejora de plataforma de reservas en producción y panel de administración. El trabajo incluyó la corrección de errores críticos en el backend, optimización del rendimiento e integración de diseños complejos de UI de Figma en componentes escalables de React. Se actualizaron más de 15 rutas, se añadieron nuevas características como un banner CMS y tarjetas de producto rediseñadas, se conectaron datos de base de datos en tiempo real y se refactorizaron diseños responsivos con más de 300 mejoras visuales en móvil, tablet y escritorio."
+                "date": "(Nov 2025)",
+                "title": "Kiosco interactivo para una exposición de arte en vivo + dashboard de identidad Web3",
+                "description": "Desarrollo de un kiosco interactivo usado en vivo durante una exposición de arte y de la plataforma web donde los usuarios reclaman codenames únicos y siguen sus activos digitales. UI animada y fiel a Figma con React Router, TypeScript y Supabase."
+            },
+            {
+                "date": "(Oct–Nov 2025)",
+                "title": "Marketplace de reservas – Mejoras de frontend y backend",
+                "description": "Mejora de un marketplace de reservas en producción y su panel de administración: corrección de bugs críticos de backend, nuevas páginas y funcionalidades (banner gestionado por CMS, tarjetas de producto rediseñadas, datos en tiempo real) y ~300 ajustes de UI responsive en móvil, tablet y escritorio."
             },
             {
                 "date": "(Oct 2025)",
@@ -97,6 +124,15 @@
     },
     "misc": {
         "gallery": "Ver galería",
-        "photo": "fotos"
+        "photo": "fotos",
+        "pdfViewer": {
+            "download": "Descargar PDF",
+            "openTab": "Abrir en una pestaña nueva",
+            "close": "Cerrar",
+            "prev": "Página anterior",
+            "next": "Página siguiente",
+            "loading": "Cargando…",
+            "error": "No se pudo cargar el PDF."
+        }
     }
 }

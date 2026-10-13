@@ -10,9 +10,21 @@ const i18n = getI18N({ currentLocale });
 // Static data that doesn't need translation
 const EXPERIENCE_STATIC = [
   {
-    title: "Senior Full-Stack Developer",
+    company: "Upwork",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.SUPABASE,
+      TAGS.POSTGRESQL,
+      TAGS.STRIPE,
+      TAGS.NESTJS,
+    ],
+    upwork: "https://www.upwork.com/freelancers/~01925090a3b319f0de",
+    reviews: "/reviews.pdf",
+  },
+  {
     company: "Zemobile",
-    image: "/experience/zemobile.webp",
     tags: [
       TAGS.SUPABASE,
       TAGS.MAKE,
@@ -25,23 +37,6 @@ const EXPERIENCE_STATIC = [
     ],
   },
   {
-    title: "CTO & Co-Founder (AI Venture)",
-    company: "Educ.AI",
-    image: "/experience/educai.webp",
-    tags: [
-      TAGS.REACT,
-      TAGS.REMIX,
-      TAGS.REACT_ROUTER,
-      TAGS.POSTGRESQL,
-      TAGS.PYTHON,
-      TAGS.TYPESCRIPT,
-      TAGS.NODEJS,
-      TAGS.DOCKER,
-    ],
-    link: "https://educia.malkuth.tech/",
-  },
-  {
-    title: "Lead Software Engineer",
     company: "Alteox",
     image: "/experience/alteox.webp",
     tags: [
@@ -49,14 +44,13 @@ const EXPERIENCE_STATIC = [
       TAGS.NEXT,
       TAGS.TYPESCRIPT,
       TAGS.NODEJS,
-      TAGS.STRIPE,
+      TAGS.STRAPI,
       TAGS.FIGMA,
-      TAGS.JAVASCRIPT,
     ],
     link: "https://alteox.com",
+    caseStudy: "/case-studies/alteox.pdf",
   },
   {
-    title: "CTO & Co-Founder",
     company: "Block Capital",
     image: "/experience/bc.webp",
     tags: [
@@ -71,9 +65,9 @@ const EXPERIENCE_STATIC = [
       TAGS.MAKE,
       TAGS.MOBILE,
     ],
+    caseStudy: "/case-studies/block-capital.pdf",
   },
   {
-    title: "Lead Software Engineer",
     company: "Sireg Chile",
     image: "/experience/sireg.webp",
     tags: [
@@ -86,9 +80,9 @@ const EXPERIENCE_STATIC = [
       TAGS.POSTGRESQL,
       TAGS.MOBILE,
     ],
+    caseStudy: "/case-studies/sireg.pdf",
   },
   {
-    title: "Full-Stack Developer & Consultant",
     company: "Envision Chile (Microsoft Partner)",
     tags: [
       TAGS.DOTNET,
@@ -100,7 +94,6 @@ const EXPERIENCE_STATIC = [
     link: "https://envision.cl",
   },
   {
-    title: "Front-End Lead",
     company: "Price2Be",
     image: "/experience/price2be.webp",
     tags: [
@@ -114,6 +107,7 @@ const EXPERIENCE_STATIC = [
     ],
     link: "https://price2be.feriadesoftware.cl/",
     github: "https://github.com/NachoLZ/frontend2.0",
+    caseStudy: "/case-studies/price2be.pdf",
   },
 ];
 
@@ -122,6 +116,8 @@ const EXPERIENCE = EXPERIENCE_STATIC.map((exp, index) => {
   const images = getExperienceImages(exp.company);
   return {
     ...exp,
+    title: i18n.experience.entries[index].role,
+    location: i18n.experience.entries[index].location,
     date: i18n.experience.entries[index].date,
     description: i18n.experience.entries[index].description,
     images: images, // Store images for later use

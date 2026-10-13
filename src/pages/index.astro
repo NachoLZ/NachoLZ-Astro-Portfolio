@@ -16,15 +16,8 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 // Page titles and descriptions based on language
-const pageTitle =
-  currentLocale === "en"
-    ? "Ignacio Lizana Portfolio - Full-Stack Developer with 7+ years of experience"
-    : "Portfolio de Ignacio Lizana - Desarrollador Full-Stack con 7+ años de experiencia";
-
-const pageDescription =
-  currentLocale === "en"
-    ? "Hire Ignacio Lizana to create your web or mobile application. Computer Engineer and Web Developer. Specialized in creating unique and scalable applications."
-    : "Contrata a Ignacio Lizana para crear tu aplicación web o móvil. Ingeniero Civil Informático y Desarrollador Web. Especializado en crear aplicaciones únicas y escalables.";
+const pageTitle = i18n.meta.title;
+const pageDescription = i18n.meta.description;
 ---
 
 <Layout title={pageTitle} description={pageDescription}>

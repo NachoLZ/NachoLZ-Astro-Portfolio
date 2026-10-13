@@ -33,14 +33,6 @@ export const EXPERIENCE_IMAGES = {
     { filename: "hoteltv", extension: "webp" },
     { filename: "hoteltv2", extension: "webp" },
   ]),
-  "Educ.AI": getImagesFromDirectory("/experience/EducAI", [
-    { filename: "dashboard", extension: "webp" },
-    { filename: "leads kanban", extension: "webp" },
-    { filename: "chat", extension: "webp" },
-     { filename: "educiadmeo", extension: "webp" },
-    { filename: "cursos lista", extension: "webp" },
-
-  ]),
   "Block Capital": getImagesFromDirectory("/experience/Block%20Capital", [
     {index: 1, extension: "webp"},
     {index: 2, extension: "webp"},
@@ -60,7 +52,6 @@ export const EXPERIENCE_IMAGES = {
     {index: 4, extension: "webp"},
     {index: 5, extension: "webp"},
     {index: 6, extension: "webp"},
-    {index: 7, extension: "webp"},
   ]),
   "Price2Be": getImagesFromDirectory("/experience/Price2Be", [
     {index: 1, extension: "webp"},
@@ -74,6 +65,14 @@ export const EXPERIENCE_IMAGES = {
 
 // Project images data
 export const PROJECT_IMAGES = {
+  "Educ.IA": getImagesFromDirectory("/experience/EducAI", [
+    { filename: "dashboard", extension: "webp" },
+    { filename: "leads kanban", extension: "webp" },
+    { filename: "chat", extension: "webp" },
+     { filename: "educiadmeo", extension: "webp" },
+    { filename: "cursos lista", extension: "webp" },
+
+  ]),
   "SS21.art": getImagesFromDirectory("/projects/ss21", [
     { filename: "home", extension: "webp" },
     { filename: "figma", extension: "webp" },
