@@ -24,27 +24,31 @@ const PdfPage = ({ doc, pageNumber }) => {
     let renderTask;
     let cancelled = false;
 
-    doc.getPage(pageNumber).then((page) => {
-      if (cancelled) return;
-      const base = page.getViewport({ scale: 1 });
-      // Fit the page inside 90vw x 80vh, rendered at device resolution
-      const scale = Math.min(
-        (window.innerWidth * 0.9) / base.width,
-        (window.innerHeight * 0.8) / base.height
-      );
-      const dpr = window.devicePixelRatio || 1;
-      const viewport = page.getViewport({ scale: scale * dpr });
-      const canvas = canvasRef.current;
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-      canvas.style.width = `${viewport.width / dpr}px`;
-      canvas.style.height = `${viewport.height / dpr}px`;
-      renderTask = page.render({
-        canvasContext: canvas.getContext("2d"),
-        viewport,
-      });
-      renderTask.promise.catch(() => {});
-    });
+    // A destroyed document throws synchronously, so start from a resolved promise
+    Promise.resolve()
+      .then(() => doc.getPage(pageNumber))
+      .then((page) => {
+        if (cancelled) return;
+        const base = page.getViewport({ scale: 1 });
+        // Fit the page inside 90vw x 80vh, rendered at device resolution
+        const scale = Math.min(
+          (window.innerWidth * 0.9) / base.width,
+          (window.innerHeight * 0.8) / base.height
+        );
+        const dpr = window.devicePixelRatio || 1;
+        const viewport = page.getViewport({ scale: scale * dpr });
+        const canvas = canvasRef.current;
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        canvas.style.width = `${viewport.width / dpr}px`;
+        canvas.style.height = `${viewport.height / dpr}px`;
+        renderTask = page.render({
+          canvasContext: canvas.getContext("2d"),
+          viewport,
+        });
+        return renderTask.promise;
+      })
+      .catch(() => {});
 
     return () => {
       cancelled = true;
@@ -57,7 +61,10 @@ const PdfPage = ({ doc, pageNumber }) => {
 
 export const PdfViewer = ({ labels }) => {
   const [pdf, setPdf] = useState(null); // { src, title }
-  const [doc, setDoc] = useState(null);
+  // The loaded document is tied to the request that opened it, so a document
+  // destroyed on close is never rendered when the next PDF opens
+  const [loaded, setLoaded] = useState(null); // { pdf, doc }
+  const doc = loaded && loaded.pdf === pdf ? loaded.doc : null;
   const [error, setError] = useState(false);
   const [current, setCurrent] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -91,7 +98,6 @@ export const PdfViewer = ({ labels }) => {
     if (!pdf) return;
     let loadingTask;
     let cancelled = false;
-    setDoc(null);
     setError(false);
     setCurrent(0);
 
@@ -101,13 +107,14 @@ export const PdfViewer = ({ labels }) => {
         loadingTask = pdfjs.getDocument(pdf.src);
         return loadingTask.promise;
       })
-      .then((loaded) => !cancelled && loaded && setDoc(loaded))
+      .then((result) => !cancelled && result && setLoaded({ pdf, doc: result }))
       .catch(() => !cancelled && setError(true));
 
     document.body.style.overflow = "hidden";
     return () => {
       cancelled = true;
       loadingTask?.destroy();
+      setLoaded(null);
       document.body.style.overflow = "";
     };
   }, [pdf]);
