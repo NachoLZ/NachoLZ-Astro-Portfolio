@@ -27,6 +27,19 @@ export function getImagesFromDirectory(basePath: string, imageFiles: Array<{inde
 
 // Experience images data
 export const EXPERIENCE_IMAGES = {
+  "Zemobile": getImagesFromDirectory("/experience/Zemobile", [
+    {index: 1, extension: "webp"},
+    {index: 2, extension: "webp"},
+    {index: 3, extension: "webp"},
+    {index: 4, extension: "webp"},
+    {index: 5, extension: "webp"},
+    {index: 6, extension: "webp"},
+    {index: 7, extension: "webp"},
+    {index: 8, extension: "webp"},
+    {index: 9, extension: "webp"},
+    {index: 10, extension: "webp"},
+    {index: 11, extension: "webp"},
+  ]),
   "Alteox": getImagesFromDirectory("/experience/Alteox", [
     { filename: "figma", extension: "webp" },
     { filename: "hotelmobile", extension: "webp" },
