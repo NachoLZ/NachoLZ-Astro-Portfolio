@@ -82,7 +82,31 @@ const showImages = Boolean(image);
     {
       showImages && (
         <div class="w-full">
-          {hasCarouselImages ? (
+          {caseStudy ? (
+            <a
+              href={caseStudy}
+              class="block"
+              data-pdf-viewer
+              data-astro-reload
+              data-pdf-title={`${company} – ${i18n.experience.caseStudy}`}
+            >
+              <div class="relative group">
+                <div class="relative flex flex-col transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl hover:-translate-y-1 hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
+                  <img
+                    alt={`${company} – ${title}`}
+                    class="object-cover object-top w-full h-48 transition duration-500 sm:h-56 group-hover:scale-105"
+                    loading="lazy"
+                    src={image}
+                  />
+                  <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl flex items-center justify-center">
+                    <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white px-3 py-1 rounded-full text-sm">
+                      {i18n.experience.caseStudy}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ) : hasCarouselImages ? (
             <div id="carouselTargetList">
               <a
                 href="#"
@@ -169,18 +193,6 @@ const showImages = Boolean(image);
         )
       }
       {
-        caseStudy && (
-          <LinkButton
-            href={caseStudy}
-            data-pdf-viewer
-            data-pdf-title={`${company} – ${i18n.experience.caseStudy}`}
-          >
-            <DocumentIcon class="size-5" />
-            {i18n.experience.caseStudy}
-          </LinkButton>
-        )
-      }
-      {
         upwork && (
           <LinkButton href={upwork}>
             <UpworkIcon class="size-5" />
@@ -193,6 +205,7 @@ const showImages = Boolean(image);
           <LinkButton
             href={reviews}
             data-pdf-viewer
+            data-astro-reload
             data-pdf-title={`${company} – ${i18n.experience.reviews}`}
           >
             <DocumentIcon class="size-5" />

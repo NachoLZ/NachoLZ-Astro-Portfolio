@@ -1,7 +1,6 @@
 ---
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
-import DocumentIcon from "./icons/Document.astro";
 import LinkButton from "./LinkButton.astro";
 import { getI18N } from "../i18n";
 
@@ -48,7 +47,31 @@ const {
 >
   <div class="w-full lg:w-1/2">
     {
-      images.length > 0 ? (
+      caseStudy ? (
+        <a
+          href={caseStudy}
+          class="block"
+          data-pdf-viewer
+          data-astro-reload
+          data-pdf-title={`${project.name} – ${i18n.projects.caseStudy}`}
+        >
+          <div class="relative group">
+            <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50 cursor-pointer">
+              <img
+                alt={title}
+                class="object-cover object-top w-full h-56 transition duration-500 sm:h-full lg:scale-110 lg:group-hover:scale-105"
+                loading="lazy"
+                src={image}
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-xl flex items-center justify-center">
+                <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white px-3 py-1 rounded-full text-sm">
+                  {i18n.projects.caseStudy}
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      ) : images.length > 0 ? (
         <div id="carouselTargetList">
           <a
             href="#"
@@ -130,18 +153,6 @@ const {
             <LinkButton href={link}>
               <Link class="size-4" />
               {i18n.projects.preview}
-            </LinkButton>
-          )
-        }
-        {
-          caseStudy && (
-            <LinkButton
-              href={caseStudy}
-              data-pdf-viewer
-              data-pdf-title={`${project.name} – ${i18n.projects.caseStudy}`}
-            >
-              <DocumentIcon class="size-5" />
-              {i18n.projects.caseStudy}
             </LinkButton>
           )
         }
