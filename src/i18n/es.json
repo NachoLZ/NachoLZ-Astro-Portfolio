@@ -79,6 +79,11 @@
         "caseStudy": "Detalles del proyecto",
         "entries": [
             {
+                "date": "(Nov 2026)",
+                "title": "CCSE Listo – SaaS de preparación del examen de nacionalidad española (producto propio)",
+                "description": "App web de preparación del CCSE diseñada, desarrollada y lanzada en solitario: práctica con corrección al instante, simulacros cronometrados y un bucle que repite los fallos, acceso sin contraseña con código por correo (Supabase Auth + Resend) y desbloqueo de 5,99 € con Stripe Checkout, webhooks firmados y RLS. Landing prerenderizada para SEO sobre un motor white-label. Desarrollado con Claude Code."
+            },
+            {
                 "date": "(Nov 2025 – Abr 2026)",
                 "title": "Educ.IA – Plataforma de IA para matrículas en web y WhatsApp (proyecto paralelo)",
                 "description": "Plataforma de IA conversacional para centros de formación: agentes de IA en web y WhatsApp que atienden al alumnado y captan leads 24/7, base de conocimiento con RAG y validación de documentos por OCR con Google Cloud Vision. Seleccionado por la aceleradora Lanzadera."

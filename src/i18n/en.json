@@ -79,6 +79,11 @@
         "caseStudy": "Project details",
         "entries": [
             {
+                "date": "(Nov 2026)",
+                "title": "CCSE Listo – Exam Prep SaaS for the Spanish Citizenship Test (Own Product)",
+                "description": "Exam-prep web app designed, built and launched solo: practice with instant feedback, timed mock exams and a loop that repeats your misses, passwordless email-code login (Supabase Auth + Resend) and a €5.99 one-time unlock via Stripe Checkout with signed webhooks and RLS. Prerendered SEO landing on a white-label engine. Built with Claude Code."
+            },
+            {
                 "date": "(Nov 2025 – Apr 2026)",
                 "title": "Educ.IA – AI Enrolment Platform on Web & WhatsApp (Side Project)",
                 "description": "Conversational AI platform for training centers: AI agents on web and WhatsApp for 24/7 student support and lead capture, a RAG knowledge base, and OCR document validation with Google Cloud Vision. Selected for the Lanzadera accelerator."

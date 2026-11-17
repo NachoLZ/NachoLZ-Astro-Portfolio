@@ -78,6 +78,20 @@ export const EXPERIENCE_IMAGES = {
 
 // Project images data
 export const PROJECT_IMAGES = {
+  "CCSE Listo": getImagesFromDirectory("/projects/CCSE%20Listo", [
+    { filename: "landing", extension: "webp" },
+    { filename: "landing mobile", extension: "webp" },
+    { filename: "home", extension: "webp" },
+    { filename: "practice", extension: "webp" },
+    { filename: "practice mobile", extension: "webp" },
+    { filename: "mock exam dark", extension: "webp" },
+    { filename: "mock exam result", extension: "webp" },
+    { filename: "all 300", extension: "webp" },
+    { filename: "plans mobile", extension: "webp" },
+    { filename: "sign in", extension: "webp" },
+    { filename: "email", extension: "webp" },
+    { filename: "home mobile dark", extension: "webp" },
+  ]),
   "Educ.IA": getImagesFromDirectory("/experience/EducAI", [
     { filename: "dashboard", extension: "webp" },
     { filename: "leads kanban", extension: "webp" },
